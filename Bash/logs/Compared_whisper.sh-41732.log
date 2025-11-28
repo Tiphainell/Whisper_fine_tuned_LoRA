@@ -1,7 +1,0 @@
-Running via sbatch on puck5 on Tue Jul 29 12:34:44 PM CEST 2025
-Python 3.10.13
-  File "/home/tleludec/Transcription_whisper/Code/Annotation_orthophoniste.py", line 114
-    if i=len(self.task_segment):
-       ^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
-computation end :Tue Jul 29 12:34:44 PM CEST 2025

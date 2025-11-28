@@ -1,89 +1,0 @@
-Running via sbatch on puck5 on Mon Nov 10 04:24:59 PM CET 2025
-Python 3.10.13
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
-wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
-wandb: setting up run z7h44yd0
-wandb: Tracking run with wandb version 0.22.2
-wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251110_162522-z7h44yd0
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run fanciful-snow-31
-wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
-wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/z7h44yd0
-trainable params: 491,520 || all params: 1,543,796,480 || trainable%: 0.0318
-  0%|          | 0/8319 [00:00<?, ?it/s]/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
-  warnings.warn(
-You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
-  return fn(*args, **kwargs)
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
-  warnings.warn(
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:181: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
-  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
-  0%|          | 1/8319 [00:13<30:46:00, 13.32s/it]  0%|          | 2/8319 [00:21<23:23:04, 10.12s/it]  0%|          | 3/8319 [00:28<20:48:12,  9.01s/it]  0%|          | 4/8319 [00:36<19:31:19,  8.45s/it]  0%|          | 5/8319 [00:43<18:28:52,  8.00s/it]  0%|          | 6/8319 [00:52<18:54:53,  8.19s/it]  0%|          | 7/8319 [00:59<18:13:54,  7.90s/it]  0%|          | 8/8319 [01:07<18:18:00,  7.93s/it]  0%|          | 9/8319 [01:15<18:01:14,  7.81s/it]  0%|          | 10/8319 [01:22<17:57:25,  7.78s/it]                                                      0%|          | 10/8319 [01:22<17:57:25,  7.78s/it]Using custom `forced_decoder_ids` from the (generation) config. This is deprecated in favor of the `task` and `language` flags/config options.
-Transcription using a multilingual Whisper will default to language detection followed by transcription instead of translation to English. This might be a breaking change for your use case. If you want to instead always translate your audio to English, make sure to pass `language='en'`. See https://github.com/huggingface/transformers/pull/28687 for more details.
-The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-{'loss': 4.3709, 'grad_norm': 1.4808096885681152, 'learning_rate': 0.000998918139199423, 'epoch': 0.0}
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-
-  0%|          | 0/895 [00:00<?, ?it/s][A
-  0%|          | 2/895 [00:27<3:26:35, 13.88s/it][A
-  0%|          | 3/895 [00:45<3:49:04, 15.41s/it][A
-  0%|          | 4/895 [01:16<5:17:26, 21.38s/it][A
-  1%|          | 5/895 [01:36<5:08:43, 20.81s/it][A
-  1%|          | 6/895 [02:04<5:42:29, 23.12s/it][A
-  1%|          | 7/895 [02:28<5:49:24, 23.61s/it][A
-  1%|          | 8/895 [02:55<6:04:53, 24.68s/it][A
-  1%|          | 9/895 [03:10<5:16:29, 21.43s/it][A
-  1%|          | 10/895 [03:22<4:36:16, 18.73s/it][A
-  1%|          | 11/895 [03:40<4:31:00, 18.39s/it][A
-  1%|▏         | 12/895 [03:53<4:06:57, 16.78s/it][A
-  1%|▏         | 13/895 [04:09<4:05:37, 16.71s/it][A
-  2%|▏         | 14/895 [04:26<4:05:48, 16.74s/it][A
-  2%|▏         | 15/895 [04:49<4:33:43, 18.66s/it][A
-  2%|▏         | 16/895 [05:02<4:06:19, 16.81s/it][A
-  2%|▏         | 17/895 [05:20<4:10:40, 17.13s/it][A
-  2%|▏         | 18/895 [05:36<4:06:56, 16.89s/it][A
-  2%|▏         | 19/895 [05:56<4:19:29, 17.77s/it][A
-  2%|▏         | 20/895 [06:16<4:27:52, 18.37s/it][A
-  2%|▏         | 21/895 [06:34<4:25:12, 18.21s/it][A
-  2%|▏         | 22/895 [06:50<4:17:32, 17.70s/it][A
-  3%|▎         | 23/895 [07:09<4:21:29, 17.99s/it][A
-  3%|▎         | 24/895 [07:31<4:39:04, 19.22s/it][A
-  3%|▎         | 25/895 [07:52<4:45:41, 19.70s/it][A
-  3%|▎         | 26/895 [09:21<9:46:33, 40.50s/it][A
-  3%|▎         | 27/895 [09:40<8:12:11, 34.02s/it][A
-  3%|▎         | 28/895 [09:57<7:00:18, 29.09s/it][A
-  3%|▎         | 29/895 [10:27<7:01:58, 29.24s/it][A
-  3%|▎         | 30/895 [10:42<6:01:41, 25.09s/it][A
-  3%|▎         | 31/895 [10:59<5:24:42, 22.55s/it][A
-  4%|▎         | 32/895 [11:16<5:00:00, 20.86s/it][A
-  4%|▎         | 33/895 [11:28<4:22:12, 18.25s/it][A
-  4%|▍         | 34/895 [11:41<4:00:35, 16.77s/it][A
-  4%|▍         | 35/895 [11:58<3:59:51, 16.73s/it][A
-  4%|▍         | 36/895 [12:16<4:07:18, 17.27s/it][A
-  4%|▍         | 37/895 [12:26<3:35:25, 15.06s/it][A
-  4%|▍         | 38/895 [12:42<3:37:35, 15.23s/it][A
-  4%|▍         | 39/895 [13:00<3:48:06, 15.99s/it][A
-  4%|▍         | 40/895 [13:09<3:20:17, 14.06s/it][A
-  5%|▍         | 41/895 [13:26<3:33:28, 15.00s/it][A
-  5%|▍         | 42/895 [13:52<4:17:27, 18.11s/it][A
-  5%|▍         | 43/895 [14:07<4:06:04, 17.33s/it][A
-  5%|▍         | 44/895 [14:23<4:00:20, 16.95s/it][A
-  5%|▌         | 45/895 [14:40<3:59:20, 16.90s/it][A
-  5%|▌         | 46/895 [14:56<3:54:30, 16.57s/it][Aslurmstepd: error: *** JOB 50894 ON puck5 CANCELLED AT 2025-11-10T16:42:18 ***

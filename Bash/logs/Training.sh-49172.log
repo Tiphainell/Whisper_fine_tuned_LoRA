@@ -1,7 +1,0 @@
-Running via sbatch on puck5 on Wed Oct 15 10:35:29 AM CEST 2025
-Python 3.10.13
-  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 226
-    logging_strategy="steps"
-                     ^^^^^^^
-SyntaxError: invalid syntax. Perhaps you forgot a comma?
-computation end :Wed Oct 15 10:35:29 AM CEST 2025

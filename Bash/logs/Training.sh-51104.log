@@ -1,51 +1,0 @@
-Running via sbatch on puck5 on Thu Nov 13 04:41:39 PM CET 2025
-Python 3.10.13
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
-wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
-wandb: Tracking run with wandb version 0.22.2
-wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251113_164155-rwr14yhz
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run twilight-glitter-53
-wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
-wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/rwr14yhz
-The model is already on multiple devices. Skipping the move to device specified in `args`.
-Using EarlyStoppingCallback without load_best_model_at_end=True. Once training is finished, the best model will not be loaded automatically.
-trainable params: 110,592 || all params: 241,845,504 || trainable%: 0.0457
-  0%|          | 0/8319 [00:00<?, ?it/s]/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
-  warnings.warn(
-You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-  0%|          | 1/8319 [00:09<20:58:28,  9.08s/it]                                                     0%|          | 1/8319 [00:09<20:58:28,  9.08s/it]The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-{'loss': 7.4885, 'grad_norm': nan, 'learning_rate': 0.001, 'epoch': 0.0}
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-
-  0%|          | 0/895 [00:00<?, ?it/s][A
-  0%|          | 2/895 [00:06<48:42,  3.27s/it][A
-  0%|          | 3/895 [00:12<1:04:23,  4.33s/it][A
-  0%|          | 4/895 [00:19<1:17:56,  5.25s/it][A
-  1%|          | 5/895 [00:24<1:20:01,  5.39s/it][A
-  1%|          | 6/895 [00:31<1:24:38,  5.71s/it][A
-  1%|          | 7/895 [00:37<1:28:51,  6.00s/it][A
-  1%|          | 8/895 [00:44<1:33:19,  6.31s/it][A
-  1%|          | 9/895 [00:50<1:32:18,  6.25s/it][A
-  1%|          | 10/895 [00:56<1:30:17,  6.12s/it][A
-  1%|          | 11/895 [01:02<1:30:52,  6.17s/it][A
-  1%|▏         | 12/895 [01:08<1:30:00,  6.12s/it][A
-  1%|▏         | 13/895 [01:14<1:28:59,  6.05s/it][A
-  2%|▏         | 14/895 [01:21<1:29:50,  6.12s/it][A
-  2%|▏         | 15/895 [01:27<1:30:24,  6.16s/it][A
-  2%|▏         | 16/895 [01:33<1:27:59,  6.01s/it][A
-  2%|▏         | 17/895 [01:39<1:28:35,  6.05s/it][A
-  2%|▏         | 18/895 [01:45<1:27:56,  6.02s/it][A
-  2%|▏         | 19/895 [01:51<1:29:42,  6.14s/it][A
-  2%|▏         | 20/895 [01:58<1:30:50,  6.23s/it][A
-  2%|▏         | 21/895 [02:04<1:30:58,  6.25s/it][A
-  2%|▏         | 22/895 [02:10<1:31:04,  6.26s/it][A
-  3%|▎         | 23/895 [02:16<1:30:58,  6.26s/it][A
-  3%|▎         | 24/895 [02:23<1:32:17,  6.36s/it][Aslurmstepd: error: *** JOB 51104 ON puck5 CANCELLED AT 2025-11-13T16:44:45 ***

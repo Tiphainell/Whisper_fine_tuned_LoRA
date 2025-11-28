@@ -1,8 +1,0 @@
-Running via sbatch on puck5 on Wed Jul 30 04:44:36 PM CEST 2025
-Python 3.10.13
-WARNING:root:failed to find espeak library. Won't be able to phonemize text or numbers
-Traceback (most recent call last):
-  File "/home/tleludec/Transcription_whisper/Code/Annotation_orthophoniste.py", line 12, in <module>
-    import Levenshtein
-ModuleNotFoundError: No module named 'Levenshtein'
-computation end :Wed Jul 30 04:44:37 PM CEST 2025

@@ -1,7 +1,0 @@
-Running via sbatch on puck5 on Wed Jul 30 11:26:06 AM CEST 2025
-Python 3.9.18
-Traceback (most recent call last):
-  File "/home/tleludec/Transcription_whisper/Code/Annotation_orthophoniste.py", line 2, in <module>
-    from spontaneous_chat.interviews import BVInterview
-ModuleNotFoundError: No module named 'spontaneous_chat'
-computation end :Wed Jul 30 11:26:06 AM CEST 2025

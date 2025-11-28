@@ -1,99 +1,0 @@
-Running via sbatch on puck5 on Tue Oct 14 04:46:49 PM CEST 2025
-Python 3.10.13
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
-wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
-wandb: setting up run oze2i9yk
-wandb: Tracking run with wandb version 0.22.2
-wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251014_164708-oze2i9yk
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run peach-cosmos-23
-wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
-wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/oze2i9yk
-trainable params: 491,520 || all params: 1,543,796,480 || trainable%: 0.0318
-  0%|          | 0/8319 [00:00<?, ?it/s]You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
-  return fn(*args, **kwargs)
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
-  warnings.warn(
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:181: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
-  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
-  0%|          | 1/8319 [00:27<63:59:49, 27.70s/it]  0%|          | 2/8319 [00:43<48:15:34, 20.89s/it]  0%|          | 3/8319 [00:59<42:45:03, 18.51s/it]  0%|          | 4/8319 [01:12<38:05:41, 16.49s/it]  0%|          | 5/8319 [01:26<35:54:27, 15.55s/it]  0%|          | 6/8319 [01:43<36:35:20, 15.85s/it]  0%|          | 7/8319 [01:56<34:51:42, 15.10s/it]  0%|          | 8/8319 [02:13<35:58:47, 15.59s/it]  0%|          | 9/8319 [02:28<35:40:29, 15.45s/it]  0%|          | 10/8319 [02:44<36:02:29, 15.62s/it]/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py:35: UserWarning: PySoundFile failed. Trying audioread instead.
-  waveform, sr = librosa.load(audio_path, sr=self.sampling_rate, mono=True)
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
-	Deprecated as of librosa version 0.10.0.
-	It will be removed in librosa version 1.0.
-  y, sr_native = __audioread_load(path, offset, duration, dtype)
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Traceback (most recent call last):
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/librosa/core/audio.py", line 176, in load
-    y, sr_native = __soundfile_load(path, offset, duration, dtype)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/librosa/core/audio.py", line 209, in __soundfile_load
-    context = sf.SoundFile(path)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/soundfile.py", line 690, in __init__
-    self._file = self._open(file, mode_int, closefd)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/soundfile.py", line 1265, in _open
-    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
-soundfile.LibsndfileError: Error opening '/scratch1/data/raw_data/HD_PARK_HOSPITAL/audio/MICRO3/4CH025M.wav': Format not recognised.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 207, in <module>
-    trainer.train()
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 2325, in train
-    return inner_training_loop(
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 2618, in _inner_training_loop
-    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 5654, in get_batch_samples
-    batch_samples.append(next(epoch_iterator))
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/accelerate/data_loader.py", line 579, in __iter__
-    next_batch = next(dataloader_iter)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 734, in __next__
-    data = self._next_data()
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 790, in _next_data
-    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
-    data = [self.dataset[idx] for idx in possibly_batched_index]
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
-    data = [self.dataset[idx] for idx in possibly_batched_index]
-  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 35, in __getitem__
-    waveform, sr = librosa.load(audio_path, sr=self.sampling_rate, mono=True)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/librosa/core/audio.py", line 184, in load
-    y, sr_native = __audioread_load(path, offset, duration, dtype)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/decorator.py", line 235, in fun
-    return caller(func, *(extras + args), **kw)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/librosa/util/decorators.py", line 63, in __wrapper
-    return func(*args, **kwargs)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/librosa/core/audio.py", line 240, in __audioread_load
-    reader = audioread.audio_open(path)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/audioread/__init__.py", line 127, in audio_open
-    return BackendClass(path)
-  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/audioread/rawread.py", line 62, in __init__
-    self._file = aifc.open(self._fh)
-  File "/shared/opt/linux-rocky9-x86_64/gcc-11.4.1/python-3.10.13-tonwmu5tgiaauuphed5vglayq53khwxc/lib/python3.10/aifc.py", line 917, in open
-    return Aifc_read(f)
-  File "/shared/opt/linux-rocky9-x86_64/gcc-11.4.1/python-3.10.13-tonwmu5tgiaauuphed5vglayq53khwxc/lib/python3.10/aifc.py", line 358, in __init__
-    self.initfp(f)
-  File "/shared/opt/linux-rocky9-x86_64/gcc-11.4.1/python-3.10.13-tonwmu5tgiaauuphed5vglayq53khwxc/lib/python3.10/aifc.py", line 314, in initfp
-    chunk = Chunk(file)
-  File "/shared/opt/linux-rocky9-x86_64/gcc-11.4.1/python-3.10.13-tonwmu5tgiaauuphed5vglayq53khwxc/lib/python3.10/chunk.py", line 63, in __init__
-    raise EOFError
-EOFError
-[1;34mwandb[0m: 
-[1;34mwandb[0m: 🚀 View run [33mpeach-cosmos-23[0m at: [34m[0m
-[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20251014_164708-oze2i9yk/logs[0m
-computation end :Tue Oct 14 04:50:03 PM CEST 2025

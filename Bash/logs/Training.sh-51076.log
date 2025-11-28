@@ -1,52 +1,0 @@
-Running via sbatch on puck5 on Thu Nov 13 12:00:34 PM CET 2025
-Python 3.10.13
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
-wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
-wandb: setting up run fme74ege
-wandb: Tracking run with wandb version 0.22.2
-wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251113_120055-fme74ege
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run woven-glade-47
-wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
-wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/fme74ege
-Using EarlyStoppingCallback without load_best_model_at_end=True. Once training is finished, the best model will not be loaded automatically.
-trainable params: 491,520 || all params: 1,543,796,480 || trainable%: 0.0318
-  0%|          | 0/8319 [00:00<?, ?it/s]/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
-  warnings.warn(
-You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
-  return fn(*args, **kwargs)
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
-  warnings.warn(
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:181: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
-  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
-  0%|          | 1/8319 [00:10<23:53:38, 10.34s/it]  0%|          | 2/8319 [00:16<18:23:13,  7.96s/it]  0%|          | 3/8319 [00:22<16:28:54,  7.13s/it]                                                     0%|          | 3/8319 [00:22<16:28:54,  7.13s/it]The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-{'loss': 3.4297, 'grad_norm': nan, 'learning_rate': 0.0009997595864887606, 'epoch': 0.0}
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-
-  0%|          | 0/895 [00:00<?, ?it/s][A
-  0%|          | 2/895 [00:25<3:10:27, 12.80s/it][A
-  0%|          | 3/895 [00:41<3:26:53, 13.92s/it][A
-  0%|          | 4/895 [01:09<4:48:27, 19.42s/it][A
-  1%|          | 5/895 [01:27<4:37:17, 18.69s/it][A
-  1%|          | 6/895 [01:52<5:08:00, 20.79s/it][A
-  1%|          | 7/895 [02:14<5:13:29, 21.18s/it][A
-  1%|          | 8/895 [02:38<5:27:34, 22.16s/it][A
-  1%|          | 9/895 [02:50<4:40:16, 18.98s/it][A
-  1%|          | 10/895 [03:00<4:00:53, 16.33s/it][A
-  1%|          | 11/895 [03:16<3:56:39, 16.06s/it][A
-  1%|▏         | 12/895 [03:27<3:33:40, 14.52s/it][A
-  1%|▏         | 13/895 [03:41<3:32:46, 14.47s/it][A
-  2%|▏         | 14/895 [03:56<3:33:25, 14.53s/it][A
-  2%|▏         | 15/895 [04:16<3:58:39, 16.27s/it][A
-  2%|▏         | 16/895 [04:26<3:31:47, 14.46s/it][A
-  2%|▏         | 17/895 [04:41<3:35:12, 14.71s/it][Aslurmstepd: error: *** JOB 51076 ON puck5 CANCELLED AT 2025-11-13T12:06:41 ***

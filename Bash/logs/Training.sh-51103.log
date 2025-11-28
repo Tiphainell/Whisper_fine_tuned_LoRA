@@ -1,107 +1,0 @@
-Running via sbatch on puck5 on Thu Nov 13 04:32:11 PM CET 2025
-Python 3.10.13
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
-  warnings.warn(
-wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
-wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
-wandb: setting up run ekbvz7oa
-wandb: Tracking run with wandb version 0.22.2
-wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251113_163227-ekbvz7oa
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run decent-wave-52
-wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
-wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/ekbvz7oa
-The model is already on multiple devices. Skipping the move to device specified in `args`.
-Using EarlyStoppingCallback without load_best_model_at_end=True. Once training is finished, the best model will not be loaded automatically.
-trainable params: 110,592 || all params: 241,845,504 || trainable%: 0.0457
-  0%|          | 0/8319 [00:00<?, ?it/s]/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
-  warnings.warn(
-You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-  0%|          | 1/8319 [00:08<20:01:32,  8.67s/it]  0%|          | 2/8319 [00:13<14:26:56,  6.25s/it]  0%|          | 3/8319 [00:17<12:45:07,  5.52s/it]                                                     0%|          | 3/8319 [00:17<12:45:07,  5.52s/it]The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-{'loss': 5.8347, 'grad_norm': 1.6030871868133545, 'learning_rate': 0.0009997595864887606, 'epoch': 0.0}
-Batch keys: ['input_features', 'labels']
-Batch keys: ['input_features', 'labels']
-
-  0%|          | 0/895 [00:00<?, ?it/s][A
-  0%|          | 2/895 [00:06<49:26,  3.32s/it][A
-  0%|          | 3/895 [00:12<1:04:46,  4.36s/it][A
-  0%|          | 4/895 [00:19<1:18:10,  5.26s/it][A
-  1%|          | 5/895 [00:25<1:21:14,  5.48s/it][A
-  1%|          | 6/895 [00:31<1:25:32,  5.77s/it][A
-  1%|          | 7/895 [00:38<1:29:06,  6.02s/it][A
-  1%|          | 8/895 [00:45<1:33:40,  6.34s/it][A
-  1%|          | 9/895 [00:51<1:32:09,  6.24s/it][A
-  1%|          | 10/895 [00:56<1:30:32,  6.14s/it][A
-  1%|          | 11/895 [01:03<1:31:10,  6.19s/it][A
-  1%|▏         | 12/895 [01:09<1:30:19,  6.14s/it][A
-  1%|▏         | 13/895 [01:15<1:30:25,  6.15s/it][A
-  2%|▏         | 14/895 [01:21<1:30:46,  6.18s/it][A
-  2%|▏         | 15/895 [01:28<1:32:34,  6.31s/it][A
-  2%|▏         | 16/895 [01:34<1:31:02,  6.21s/it][A
-  2%|▏         | 17/895 [01:40<1:32:02,  6.29s/it][A
-  2%|▏         | 18/895 [01:46<1:31:25,  6.26s/it][A
-  2%|▏         | 19/895 [01:53<1:32:01,  6.30s/it][A
-  2%|▏         | 20/895 [01:59<1:32:07,  6.32s/it][A
-  2%|▏         | 21/895 [02:05<1:31:29,  6.28s/it][A
-  2%|▏         | 22/895 [02:12<1:30:58,  6.25s/it][A
-  3%|▎         | 23/895 [02:18<1:30:53,  6.25s/it][A
-  3%|▎         | 24/895 [02:24<1:32:11,  6.35s/it][A
-  3%|▎         | 25/895 [02:31<1:32:54,  6.41s/it][A
-  3%|▎         | 26/895 [02:37<1:31:02,  6.29s/it][A
-  3%|▎         | 27/895 [02:43<1:30:47,  6.28s/it][A
-  3%|▎         | 28/895 [02:49<1:29:57,  6.23s/it][A
-  3%|▎         | 29/895 [02:56<1:31:56,  6.37s/it][A
-  3%|▎         | 30/895 [03:02<1:30:31,  6.28s/it][A
-  3%|▎         | 31/895 [03:08<1:28:47,  6.17s/it][A
-  4%|▎         | 32/895 [03:13<1:22:00,  5.70s/it][A
-  4%|▎         | 33/895 [03:16<1:12:33,  5.05s/it][A
-  4%|▍         | 34/895 [03:20<1:06:23,  4.63s/it][A
-  4%|▍         | 35/895 [03:24<1:03:10,  4.41s/it][A
-  4%|▍         | 36/895 [03:28<1:00:58,  4.26s/it][A
-  4%|▍         | 37/895 [03:31<57:25,  4.02s/it]  [A
-  4%|▍         | 38/895 [03:35<56:13,  3.94s/it][A
-  4%|▍         | 39/895 [03:39<56:34,  3.97s/it][A
-  4%|▍         | 40/895 [03:42<54:25,  3.82s/it][A
-  5%|▍         | 41/895 [03:55<1:31:21,  6.42s/it][A
-  5%|▍         | 42/895 [04:03<1:39:05,  6.97s/it][A
-  5%|▍         | 43/895 [04:11<1:42:02,  7.19s/it][A
-  5%|▍         | 44/895 [04:19<1:44:33,  7.37s/it][A
-  5%|▌         | 45/895 [04:26<1:46:14,  7.50s/it][A
-  5%|▌         | 46/895 [04:34<1:44:54,  7.41s/it][A
-  5%|▌         | 47/895 [04:41<1:44:07,  7.37s/it][A
-  5%|▌         | 48/895 [04:48<1:43:54,  7.36s/it][A
-  5%|▌         | 49/895 [04:56<1:44:30,  7.41s/it][A
-  6%|▌         | 50/895 [05:03<1:43:51,  7.37s/it][A
-  6%|▌         | 51/895 [05:10<1:44:03,  7.40s/it][A
-  6%|▌         | 52/895 [05:18<1:45:41,  7.52s/it][A
-  6%|▌         | 53/895 [05:26<1:46:45,  7.61s/it][A
-  6%|▌         | 54/895 [05:34<1:46:42,  7.61s/it][A
-  6%|▌         | 55/895 [05:41<1:46:25,  7.60s/it][A
-  6%|▋         | 56/895 [05:49<1:47:18,  7.67s/it][A
-  6%|▋         | 57/895 [05:57<1:47:34,  7.70s/it][A
-  6%|▋         | 58/895 [06:05<1:47:16,  7.69s/it][A
-  7%|▋         | 59/895 [06:12<1:47:47,  7.74s/it][A
-  7%|▋         | 60/895 [06:20<1:46:42,  7.67s/it][A
-  7%|▋         | 61/895 [06:28<1:46:21,  7.65s/it][A
-  7%|▋         | 62/895 [06:35<1:46:35,  7.68s/it][A
-  7%|▋         | 63/895 [06:43<1:47:11,  7.73s/it][A
-  7%|▋         | 64/895 [06:51<1:48:18,  7.82s/it][A
-  7%|▋         | 65/895 [06:58<1:46:09,  7.67s/it][A
-  7%|▋         | 66/895 [07:06<1:44:51,  7.59s/it][A
-  7%|▋         | 67/895 [07:14<1:45:55,  7.68s/it][A
-  8%|▊         | 68/895 [07:21<1:45:25,  7.65s/it][A
-  8%|▊         | 69/895 [07:29<1:43:56,  7.55s/it][A
-  8%|▊         | 70/895 [07:36<1:42:42,  7.47s/it][A
-  8%|▊         | 71/895 [07:44<1:43:20,  7.53s/it][A
-  8%|▊         | 72/895 [07:51<1:43:27,  7.54s/it][A
-  8%|▊         | 73/895 [07:58<1:41:56,  7.44s/it][A
-  8%|▊         | 74/895 [08:06<1:42:19,  7.48s/it][A
-  8%|▊         | 75/895 [08:14<1:42:46,  7.52s/it][A
-  8%|▊         | 76/895 [08:21<1:42:39,  7.52s/it][A
-  9%|▊         | 77/895 [08:29<1:43:58,  7.63s/it][Aslurmstepd: error: *** JOB 51103 ON puck5 CANCELLED AT 2025-11-13T16:41:36 ***

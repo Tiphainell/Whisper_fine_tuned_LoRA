@@ -1,7 +1,0 @@
-Running via sbatch on puck5 on Fri Nov  7 03:25:26 PM CET 2025
-Python 3.10.13
-  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 254
-    )
-    ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 253
-computation end :Fri Nov  7 03:25:26 PM CET 2025
