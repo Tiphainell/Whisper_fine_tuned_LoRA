@@ -1,0 +1,7 @@
+Running via sbatch on puck5 on Mon Nov 17 04:03:07 PM CET 2025
+Python 3.10.13
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 30
+    for seg in tqdm(segments, desc="Validating segments")::
+                                                          ^
+SyntaxError: invalid syntax
+computation end :Mon Nov 17 04:03:07 PM CET 2025

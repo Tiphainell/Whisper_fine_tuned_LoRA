@@ -1,0 +1,18 @@
+Running via sbatch on puck5 on Tue Nov 18 12:13:52 PM CET 2025
+Python 3.10.13
+Processing train segments:   0%|          | 0/22080 [00:00<?, ?it/s]/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+Processing train segments:   0%|          | 0/22080 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/Tensor_on_disk.py", line 79, in <module>
+    save_features(train_segments, "train")
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/Tensor_on_disk.py", line 75, in save_features
+    torch.save({"input_features": input_features, "labels": labels}, feat_file)
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/serialization.py", line 966, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/serialization.py", line 828, in _open_zipfile_writer
+    return container(name_or_buffer)  # type: ignore[arg-type]
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/serialization.py", line 792, in __init__
+    torch._C.PyTorchFileWriter(
+RuntimeError: Parent directory /home/tleludec/Transcription_whisper/Data/Features_on_disk/train/MICRO3 does not exist.
+computation end :Tue Nov 18 12:14:00 PM CET 2025

@@ -1,0 +1,18 @@
+Running via sbatch on puck6 on Fri Nov 21 11:02:08 AM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+
+ Loading Base model...
+Inference:   0%|          | 0/740 [00:00<?, ?it/s]You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Inference:   0%|          | 0/740 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/inference.py", line 178, in <module>
+    base_preds, base_refs, filenames = run_inference(base_model, processor, dataloader, device)
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/inference.py", line 117, in run_inference
+    filenames.extend(batch_filenames)
+NameError: name 'filenames' is not defined
+computation end :Fri Nov 21 11:02:26 AM CET 2025

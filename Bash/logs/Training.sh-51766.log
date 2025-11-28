@@ -1,0 +1,13 @@
+Running via sbatch on puck6 on Fri Nov 28 03:25:58 PM CET 2025
+Python 3.10.13
+==============================================
+      Training with LoRA rank = 1
+==============================================
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script//src/Training.py", line 9, in <module>
+    from utils.text import normalized_ponctuation,make_compute_metrics
+ModuleNotFoundError: No module named 'utils.text'

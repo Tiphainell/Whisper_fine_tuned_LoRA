@@ -1,0 +1,7 @@
+Running via sbatch on puck5 on Wed Jul 30 03:34:57 PM CEST 2025
+Python 3.10.13
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/Script_transcription.py", line 17, in <module>
+    whisper_model=whisper.load_model(model_used,device=device,language='fr')
+TypeError: load_model() got an unexpected keyword argument 'language'
+computation end :Wed Jul 30 03:35:03 PM CEST 2025

@@ -1,0 +1,205 @@
+Running via sbatch on puck5 on Fri Nov  7 02:34:36 PM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
+wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run yjge9xja
+wandb: Tracking run with wandb version 0.22.2
+wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251107_143456-yjge9xja
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run mild-smoke-27
+wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
+wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/yjge9xja
+trainable params: 491,520 || all params: 1,543,796,480 || trainable%: 0.0318
+  0%|          | 0/8319 [00:00<?, ?it/s]/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:181: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+  0%|          | 1/8319 [00:11<26:14:50, 11.36s/it]  0%|          | 2/8319 [00:18<21:07:38,  9.14s/it]  0%|          | 3/8319 [00:26<19:28:20,  8.43s/it]  0%|          | 4/8319 [00:34<18:44:06,  8.11s/it]  0%|          | 5/8319 [00:41<18:15:14,  7.90s/it]  0%|          | 6/8319 [00:50<18:40:12,  8.09s/it]  0%|          | 7/8319 [00:57<17:53:37,  7.75s/it]  0%|          | 8/8319 [01:05<18:12:10,  7.88s/it]  0%|          | 9/8319 [01:12<17:59:57,  7.80s/it]  0%|          | 10/8319 [01:20<17:59:42,  7.80s/it]                                                      0%|          | 10/8319 [01:20<17:59:42,  7.80s/it]Using custom `forced_decoder_ids` from the (generation) config. This is deprecated in favor of the `task` and `language` flags/config options.
+Transcription using a multilingual Whisper will default to language detection followed by transcription instead of translation to English. This might be a breaking change for your use case. If you want to instead always translate your audio to English, make sure to pass `language='en'`. See https://github.com/huggingface/transformers/pull/28687 for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+{'loss': 4.3839, 'grad_norm': 2.2800278663635254, 'learning_rate': 0.000998918139199423, 'epoch': 0.0}
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+
+  0%|          | 0/895 [00:00<?, ?it/s][A
+  0%|          | 2/895 [00:27<3:28:18, 14.00s/it][A
+  0%|          | 3/895 [00:45<3:48:54, 15.40s/it][A
+  0%|          | 4/895 [01:16<5:13:35, 21.12s/it][A
+  1%|          | 5/895 [01:35<5:03:20, 20.45s/it][A
+  1%|          | 6/895 [02:02<5:34:59, 22.61s/it][A
+  1%|          | 7/895 [02:26<5:44:07, 23.25s/it][A
+  1%|          | 8/895 [02:52<5:56:56, 24.15s/it][A
+  1%|          | 9/895 [03:06<5:09:08, 20.94s/it][A
+  1%|          | 10/895 [03:18<4:29:31, 18.27s/it][A
+  1%|          | 11/895 [03:36<4:23:36, 17.89s/it][A
+  1%|▏         | 12/895 [03:48<4:00:28, 16.34s/it][A
+  1%|▏         | 13/895 [04:04<3:58:34, 16.23s/it][A
+  2%|▏         | 14/895 [04:20<3:58:16, 16.23s/it][A
+  2%|▏         | 15/895 [04:42<4:23:29, 17.97s/it][A
+  2%|▏         | 16/895 [04:55<3:57:12, 16.19s/it][A
+  2%|▏         | 17/895 [05:12<4:01:10, 16.48s/it][A
+  2%|▏         | 18/895 [05:28<3:58:09, 16.29s/it][A
+  2%|▏         | 19/895 [05:47<4:10:19, 17.15s/it][A
+  2%|▏         | 20/895 [06:06<4:18:40, 17.74s/it][A
+  2%|▏         | 21/895 [06:23<4:16:18, 17.60s/it][A
+  2%|▏         | 22/895 [06:39<4:08:47, 17.10s/it][A
+  3%|▎         | 23/895 [06:56<4:08:14, 17.08s/it][A
+  3%|▎         | 24/895 [07:17<4:26:44, 18.38s/it][A
+  3%|▎         | 25/895 [07:38<4:34:04, 18.90s/it][A
+  3%|▎         | 26/895 [09:05<9:33:13, 39.58s/it][A
+  3%|▎         | 27/895 [09:24<8:03:17, 33.41s/it][A
+  3%|▎         | 28/895 [09:42<6:53:40, 28.63s/it][A
+  3%|▎         | 29/895 [10:11<6:57:22, 28.92s/it][A
+  3%|▎         | 30/895 [10:27<5:59:09, 24.91s/it][A
+  3%|▎         | 31/895 [10:44<5:23:57, 22.50s/it][A
+  4%|▎         | 32/895 [11:01<5:00:30, 20.89s/it][A
+  4%|▎         | 33/895 [11:13<4:22:41, 18.28s/it][A
+  4%|▍         | 34/895 [11:27<4:01:08, 16.80s/it][A
+  4%|▍         | 35/895 [11:44<4:01:19, 16.84s/it][A
+  4%|▍         | 36/895 [12:02<4:07:53, 17.31s/it][A
+  4%|▍         | 37/895 [12:12<3:36:26, 15.14s/it][A
+  4%|▍         | 38/895 [12:28<3:40:17, 15.42s/it][A
+  4%|▍         | 39/895 [12:47<3:54:49, 16.46s/it][A
+  4%|▍         | 40/895 [12:57<3:25:50, 14.44s/it][A
+  5%|▍         | 41/895 [13:15<3:41:05, 15.53s/it][A
+  5%|▍         | 42/895 [13:41<4:24:14, 18.59s/it][A
+  5%|▍         | 43/895 [13:56<4:10:09, 17.62s/it][A
+  5%|▍         | 44/895 [14:12<4:03:16, 17.15s/it][A
+  5%|▌         | 45/895 [14:29<4:01:37, 17.06s/it][A
+  5%|▌         | 46/895 [14:44<3:55:36, 16.65s/it][A
+  5%|▌         | 47/895 [14:58<3:41:35, 15.68s/it][A
+  5%|▌         | 48/895 [15:15<3:45:33, 15.98s/it][A
+  5%|▌         | 49/895 [15:31<3:46:49, 16.09s/it][A
+  6%|▌         | 50/895 [15:46<3:44:01, 15.91s/it][A
+  6%|▌         | 51/895 [16:04<3:50:55, 16.42s/it][A
+  6%|▌         | 52/895 [16:21<3:52:10, 16.52s/it][A
+  6%|▌         | 53/895 [16:40<4:03:21, 17.34s/it][A
+  6%|▌         | 54/895 [16:55<3:54:04, 16.70s/it][A
+  6%|▌         | 55/895 [17:10<3:43:57, 16.00s/it][A
+  6%|▋         | 56/895 [17:28<3:55:39, 16.85s/it][A
+  6%|▋         | 57/895 [17:46<3:57:32, 17.01s/it][A
+  6%|▋         | 58/895 [18:01<3:48:05, 16.35s/it][A
+  7%|▋         | 59/895 [18:19<3:57:03, 17.01s/it][A
+  7%|▋         | 60/895 [18:35<3:50:23, 16.55s/it][A
+  7%|▋         | 61/895 [18:49<3:41:54, 15.96s/it][A
+  7%|▋         | 62/895 [19:05<3:39:31, 15.81s/it][A
+  7%|▋         | 63/895 [19:22<3:45:15, 16.24s/it][A
+  7%|▋         | 64/895 [19:42<3:58:54, 17.25s/it][A
+  7%|▋         | 65/895 [19:58<3:54:46, 16.97s/it][A
+  7%|▋         | 66/895 [20:13<3:48:07, 16.51s/it][A
+  7%|▋         | 67/895 [20:37<4:15:41, 18.53s/it][A
+  8%|▊         | 68/895 [20:55<4:13:37, 18.40s/it][A
+  8%|▊         | 69/895 [21:10<4:01:11, 17.52s/it][A
+  8%|▊         | 70/895 [21:26<3:54:38, 17.06s/it][A
+  8%|▊         | 71/895 [21:42<3:51:20, 16.85s/it][A
+  8%|▊         | 72/895 [21:59<3:48:05, 16.63s/it][A
+  8%|▊         | 73/895 [22:13<3:38:04, 15.92s/it][A
+  8%|▊         | 74/895 [22:29<3:38:13, 15.95s/it][A
+  8%|▊         | 75/895 [22:45<3:40:20, 16.12s/it][A
+  8%|▊         | 76/895 [23:01<3:36:12, 15.84s/it][A
+  9%|▊         | 77/895 [23:20<3:49:16, 16.82s/it][A
+  9%|▊         | 78/895 [23:36<3:47:15, 16.69s/it][A
+  9%|▉         | 79/895 [23:48<3:27:59, 15.29s/it][A
+  9%|▉         | 80/895 [24:06<3:40:20, 16.22s/it][A
+  9%|▉         | 81/895 [24:25<3:51:26, 17.06s/it][A
+  9%|▉         | 82/895 [24:47<4:07:58, 18.30s/it][A
+  9%|▉         | 83/895 [25:05<4:08:28, 18.36s/it][A
+  9%|▉         | 84/895 [25:29<4:28:27, 19.86s/it][A
+  9%|▉         | 85/895 [25:43<4:07:34, 18.34s/it][A
+ 10%|▉         | 86/895 [26:00<4:00:26, 17.83s/it][A
+ 10%|▉         | 87/895 [27:47<10:01:10, 44.64s/it][A
+ 10%|▉         | 88/895 [29:34<14:12:38, 63.39s/it][A
+ 10%|▉         | 89/895 [29:52<11:08:56, 49.80s/it][A
+ 10%|█         | 90/895 [30:09<8:54:13, 39.82s/it] [A
+ 10%|█         | 91/895 [30:22<7:07:25, 31.90s/it][A
+ 10%|█         | 92/895 [30:33<5:40:49, 25.47s/it][A
+ 10%|█         | 93/895 [30:46<4:52:05, 21.85s/it][A
+ 11%|█         | 94/895 [30:59<4:14:36, 19.07s/it][A
+ 11%|█         | 95/895 [31:11<3:46:22, 16.98s/it][A
+ 11%|█         | 96/895 [31:22<3:22:59, 15.24s/it][A
+ 11%|█         | 97/895 [31:35<3:13:04, 14.52s/it][A
+ 11%|█         | 98/895 [31:46<2:58:56, 13.47s/it][A
+ 11%|█         | 99/895 [31:59<2:57:37, 13.39s/it][A
+ 11%|█         | 100/895 [32:12<2:53:57, 13.13s/it][A
+ 11%|█▏        | 101/895 [32:26<2:57:01, 13.38s/it][A
+ 11%|█▏        | 102/895 [32:38<2:52:22, 13.04s/it][A
+ 12%|█▏        | 103/895 [32:49<2:43:50, 12.41s/it][A
+ 12%|█▏        | 104/895 [32:59<2:36:19, 11.86s/it][A
+ 12%|█▏        | 105/895 [33:12<2:39:41, 12.13s/it][A
+ 12%|█▏        | 106/895 [33:24<2:39:43, 12.15s/it][A
+ 12%|█▏        | 107/895 [33:37<2:42:13, 12.35s/it][A
+ 12%|█▏        | 108/895 [33:51<2:47:45, 12.79s/it][A
+ 12%|█▏        | 109/895 [34:02<2:40:14, 12.23s/it][A
+ 12%|█▏        | 110/895 [34:14<2:41:07, 12.32s/it][A
+ 12%|█▏        | 111/895 [34:27<2:41:37, 12.37s/it][A
+ 13%|█▎        | 112/895 [34:46<3:05:56, 14.25s/it][A
+ 13%|█▎        | 113/895 [35:11<3:48:20, 17.52s/it][A
+ 13%|█▎        | 114/895 [35:35<4:16:09, 19.68s/it][A
+ 13%|█▎        | 115/895 [35:58<4:27:27, 20.57s/it][A
+ 13%|█▎        | 116/895 [36:23<4:43:56, 21.87s/it][A
+ 13%|█▎        | 117/895 [36:53<5:15:19, 24.32s/it][A
+ 13%|█▎        | 118/895 [37:22<5:32:09, 25.65s/it][A
+ 13%|█▎        | 119/895 [37:53<5:54:34, 27.42s/it][A
+ 13%|█▎        | 120/895 [38:18<5:42:09, 26.49s/it][A
+ 14%|█▎        | 121/895 [38:38<5:17:14, 24.59s/it][A
+ 14%|█▎        | 122/895 [39:04<5:22:11, 25.01s/it][A
+ 14%|█▎        | 123/895 [39:21<4:50:45, 22.60s/it][A
+ 14%|█▍        | 124/895 [39:42<4:46:44, 22.31s/it][A
+ 14%|█▍        | 125/895 [39:55<4:09:15, 19.42s/it][A
+ 14%|█▍        | 126/895 [40:09<3:47:59, 17.79s/it][A
+ 14%|█▍        | 127/895 [40:21<3:26:54, 16.16s/it][A
+ 14%|█▍        | 128/895 [40:33<3:10:49, 14.93s/it][A
+ 14%|█▍        | 129/895 [40:44<2:53:23, 13.58s/it][A
+ 15%|█▍        | 130/895 [40:56<2:48:29, 13.21s/it][A
+ 15%|█▍        | 131/895 [41:09<2:46:46, 13.10s/it][A
+ 15%|█▍        | 132/895 [41:21<2:43:29, 12.86s/it][A
+ 15%|█▍        | 133/895 [41:34<2:42:53, 12.83s/it][A
+ 15%|█▍        | 134/895 [41:46<2:40:34, 12.66s/it][A
+ 15%|█▌        | 135/895 [41:57<2:33:56, 12.15s/it][A
+ 15%|█▌        | 136/895 [42:09<2:33:30, 12.13s/it][A
+ 15%|█▌        | 137/895 [42:22<2:35:27, 12.31s/it][A
+ 15%|█▌        | 138/895 [42:35<2:37:51, 12.51s/it][A
+ 16%|█▌        | 139/895 [42:47<2:36:47, 12.44s/it][A
+ 16%|█▌        | 140/895 [43:01<2:39:52, 12.71s/it][A
+ 16%|█▌        | 141/895 [43:13<2:38:16, 12.60s/it][A
+ 16%|█▌        | 142/895 [43:25<2:34:43, 12.33s/it][A
+ 16%|█▌        | 143/895 [43:37<2:33:22, 12.24s/it][A
+ 16%|█▌        | 144/895 [43:52<2:45:10, 13.20s/it][A
+ 16%|█▌        | 145/895 [44:05<2:42:18, 12.98s/it][A
+ 16%|█▋        | 146/895 [44:19<2:48:25, 13.49s/it][A
+ 16%|█▋        | 147/895 [44:32<2:45:47, 13.30s/it][A
+ 17%|█▋        | 148/895 [44:46<2:45:15, 13.27s/it][A
+ 17%|█▋        | 149/895 [44:58<2:43:51, 13.18s/it][A
+ 17%|█▋        | 150/895 [45:12<2:45:13, 13.31s/it][A
+ 17%|█▋        | 151/895 [45:25<2:44:58, 13.30s/it][A
+ 17%|█▋        | 152/895 [45:39<2:45:11, 13.34s/it][A
+ 17%|█▋        | 153/895 [45:50<2:38:51, 12.85s/it][A
+ 17%|█▋        | 154/895 [46:05<2:44:09, 13.29s/it][A
+ 17%|█▋        | 155/895 [46:21<2:54:00, 14.11s/it][A
+ 17%|█▋        | 156/895 [46:34<2:50:33, 13.85s/it][A
+ 18%|█▊        | 157/895 [46:46<2:42:31, 13.21s/it][A
+ 18%|█▊        | 158/895 [46:58<2:39:39, 13.00s/it][A
+ 18%|█▊        | 159/895 [47:11<2:40:07, 13.05s/it][A
+ 18%|█▊        | 160/895 [47:42<3:43:35, 18.25s/it][A
+ 18%|█▊        | 161/895 [47:57<3:32:23, 17.36s/it][A
+ 18%|█▊        | 162/895 [48:12<3:21:15, 16.47s/it][Aslurmstepd: error: *** JOB 50865 ON puck5 CANCELLED AT 2025-11-07T15:25:05 ***

@@ -1,0 +1,4 @@
+Running via sbatch on puck6 on Tue Nov 25 03:41:01 PM CET 2025
+Python 3.10.13
+/var/spool/slurmd/job51651/slurm_script: line 33: syntax error near unexpected token `('
+/var/spool/slurmd/job51651/slurm_script: line 33: `FEATURES_DIR = Path("/home/tleludec/Transcription_whisper/Data/Features_on_disk")'

@@ -1,0 +1,17 @@
+Running via sbatch on puck6 on Fri Nov 21 10:48:54 AM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/inference.py", line 46, in <module>
+    def collate_fn(batch):
+  File "/shared/opt/linux-rocky9-x86_64/gcc-11.4.1/python-3.10.13-tonwmu5tgiaauuphed5vglayq53khwxc/lib/python3.10/dataclasses.py", line 1184, in dataclass
+    return wrap(cls)
+  File "/shared/opt/linux-rocky9-x86_64/gcc-11.4.1/python-3.10.13-tonwmu5tgiaauuphed5vglayq53khwxc/lib/python3.10/dataclasses.py", line 1175, in wrap
+    return _process_class(cls, init, repr, eq, order, unsafe_hash,
+  File "/shared/opt/linux-rocky9-x86_64/gcc-11.4.1/python-3.10.13-tonwmu5tgiaauuphed5vglayq53khwxc/lib/python3.10/dataclasses.py", line 908, in _process_class
+    for b in cls.__mro__[-1:0:-1]:
+AttributeError: 'function' object has no attribute '__mro__'
+computation end :Fri Nov 21 10:49:07 AM CET 2025

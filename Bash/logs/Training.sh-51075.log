@@ -1,0 +1,60 @@
+Running via sbatch on puck5 on Thu Nov 13 11:52:14 AM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
+wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run cp4dqm2b
+wandb: Tracking run with wandb version 0.22.2
+wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251113_115234-cp4dqm2b
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run stellar-dragon-46
+wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
+wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/cp4dqm2b
+trainable params: 491,520 || all params: 1,543,796,480 || trainable%: 0.0318
+Downloading builder script: 0.00B [00:00, ?B/s]Downloading builder script: 5.13kB [00:00, 4.03MB/s]
+Using EarlyStoppingCallback without load_best_model_at_end=True. Once training is finished, the best model will not be loaded automatically.
+  0%|          | 0/8319 [00:00<?, ?it/s]/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:181: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+  0%|          | 1/8319 [00:10<24:49:23, 10.74s/it]  0%|          | 2/8319 [00:17<18:54:17,  8.18s/it]  0%|          | 3/8319 [00:23<16:42:25,  7.23s/it]                                                     0%|          | 3/8319 [00:23<16:42:25,  7.23s/it]The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+{'loss': 3.4345, 'grad_norm': nan, 'learning_rate': 0.0009997595864887606, 'epoch': 0.0}
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+
+  0%|          | 0/895 [00:00<?, ?it/s][A
+  0%|          | 2/895 [00:25<3:08:49, 12.69s/it][A
+  0%|          | 3/895 [00:40<3:26:24, 13.88s/it][A
+  0%|          | 4/895 [01:09<4:47:47, 19.38s/it][A
+  1%|          | 5/895 [01:26<4:36:23, 18.63s/it][A
+  1%|          | 6/895 [01:51<5:07:29, 20.75s/it][A
+  1%|          | 7/895 [02:13<5:11:45, 21.06s/it][A
+  1%|          | 8/895 [02:37<5:25:45, 22.04s/it][A
+  1%|          | 9/895 [02:49<4:38:02, 18.83s/it][A
+  1%|          | 10/895 [02:59<3:59:02, 16.21s/it][A
+  1%|          | 11/895 [03:14<3:53:22, 15.84s/it][A
+  1%|▏         | 12/895 [03:25<3:29:46, 14.25s/it][A
+  1%|▏         | 13/895 [03:39<3:28:01, 14.15s/it][A
+  2%|▏         | 14/895 [03:53<3:27:46, 14.15s/it][A
+  2%|▏         | 15/895 [04:13<3:53:56, 15.95s/it][A
+  2%|▏         | 16/895 [04:23<3:28:38, 14.24s/it][A
+  2%|▏         | 17/895 [04:39<3:32:55, 14.55s/it][A
+  2%|▏         | 18/895 [04:52<3:29:13, 14.31s/it][A
+  2%|▏         | 19/895 [05:10<3:43:21, 15.30s/it][A
+  2%|▏         | 20/895 [05:28<3:53:27, 16.01s/it][A
+  2%|▏         | 21/895 [05:43<3:51:48, 15.91s/it][A
+  2%|▏         | 22/895 [05:57<3:43:12, 15.34s/it][A
+  3%|▎         | 23/895 [06:12<3:42:28, 15.31s/it][A
+  3%|▎         | 24/895 [06:32<4:01:03, 16.61s/it][Aslurmstepd: error: *** JOB 51075 ON puck5 CANCELLED AT 2025-11-13T12:00:21 ***

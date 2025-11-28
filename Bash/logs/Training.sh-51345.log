@@ -1,0 +1,60 @@
+Running via sbatch on puck5 on Tue Nov 18 04:13:32 PM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
+wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run lru0u2h9
+wandb: Tracking run with wandb version 0.22.2
+wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251118_161348-lru0u2h9
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run magic-firefly-65
+wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
+wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/lru0u2h9
+The model is already on multiple devices. Skipping the move to device specified in `args`.
+You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+trainable params: 110,592 || all params: 241,845,504 || trainable%: 0.0457
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+  0%|          | 0/8 [00:00<?, ?it/s] 25%|██▌       | 2/8 [00:01<00:05,  1.08it/s] 38%|███▊      | 3/8 [00:02<00:04,  1.03it/s] 50%|█████     | 4/8 [00:04<00:05,  1.36s/it] 62%|██████▎   | 5/8 [00:06<00:03,  1.28s/it] 75%|███████▌  | 6/8 [00:07<00:02,  1.41s/it] 88%|████████▊ | 7/8 [00:09<00:01,  1.50s/it]100%|██████████| 8/8 [00:11<00:00,  1.54s/it]Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Predictions type: <class 'numpy.ndarray'>
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 244, in <module>
+    trainer.evaluate()
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer_seq2seq.py", line 191, in evaluate
+    return super().evaluate(eval_dataset, ignore_keys=ignore_keys, metric_key_prefix=metric_key_prefix)
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 4489, in evaluate
+    output = eval_loop(
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 4780, in evaluation_loop
+    metrics = self.compute_metrics(
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 239, in <lambda>
+    compute_metrics=lambda eval_pred: compute_metrics(eval_pred, metric),
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 107, in compute_metrics
+    predictions = np.where(predictions != -100, predictions, tokenizer.pad_token_id)
+NameError: name 'tokenizer' is not defined
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 244, in <module>
+    trainer.evaluate()
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer_seq2seq.py", line 191, in evaluate
+    return super().evaluate(eval_dataset, ignore_keys=ignore_keys, metric_key_prefix=metric_key_prefix)
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 4489, in evaluate
+    output = eval_loop(
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 4780, in evaluation_loop
+    metrics = self.compute_metrics(
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 239, in <lambda>
+    compute_metrics=lambda eval_pred: compute_metrics(eval_pred, metric),
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 107, in compute_metrics
+    predictions = np.where(predictions != -100, predictions, tokenizer.pad_token_id)
+NameError: name 'tokenizer' is not defined
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mmagic-firefly-65[0m at: [34m[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20251118_161348-lru0u2h9/logs[0m
+computation end :Tue Nov 18 04:14:07 PM CET 2025

@@ -1,0 +1,27 @@
+Running via sbatch on puck6 on Tue Nov 25 03:49:12 PM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
+wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run azdfzxdm
+wandb: Tracking run with wandb version 0.22.2
+wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251125_154920-azdfzxdm
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run honest-morning-1
+wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/fine-tuning-whisper-lora
+wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/fine-tuning-whisper-lora/runs/azdfzxdm
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 310, in <module>
+    train(features_dir=features_dir, whisper_model=whisper_model, batch_size=batch_size,learning_rate=learning_rate,num_train_epochs=num_epochs, lora_r=lora_rank,lora_dropout=lora_dropout, lora_alpha=lora_alpha, test_eval=test_evaluation,output_dir=output_dir)
+NameError: name 'test_evaluation' is not defined
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 310, in <module>
+    train(features_dir=features_dir, whisper_model=whisper_model, batch_size=batch_size,learning_rate=learning_rate,num_train_epochs=num_epochs, lora_r=lora_rank,lora_dropout=lora_dropout, lora_alpha=lora_alpha, test_eval=test_evaluation,output_dir=output_dir)
+NameError: name 'test_evaluation' is not defined
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mhonest-morning-1[0m at: [34m[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20251125_154920-azdfzxdm/logs[0m
+computation end :Tue Nov 25 03:49:23 PM CET 2025

@@ -1,0 +1,9 @@
+Running via sbatch on puck5 on Wed Jul 30 02:58:21 PM CEST 2025
+Python 3.10.13
+WARNING:root:failed to find espeak library. Won't be able to phonemize text or numbers
+WARNING:spontaneous_chat:Invalid task name Les dernières 24h in file /scratch1/data/derived_data/HD_PARK_HOSPITAL/annotations/normalized/MICRO1/4CH233M/l.carabin/final.TextGrid
+WARNING:spontaneous_chat:Invalid task name L-[a]-[i]-[u in file /scratch1/data/derived_data/HD_PARK_HOSPITAL/annotations/normalized/MICRO4/4CH035M/apavard/final.TextGrid
+WARNING:spontaneous_chat:Invalid task name [a in file /scratch1/data/derived_data/HD_PARK_HOSPITAL/annotations/normalized/MICRO4/4CH034M/apavard/final.TextGrid
+WARNING:spontaneous_chat:Invalid task name mois de l'année enver in file /scratch1/data/derived_data/HD_PARK_HOSPITAL/annotations/normalized/MICRO4/4CH065M/hkerleau/final.TextGrid
+/home/tleludec/Transcription_whisper/Code/Data/Comparaison_whisper_large
+computation end :Wed Jul 30 02:58:52 PM CEST 2025

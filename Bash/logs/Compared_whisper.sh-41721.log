@@ -1,0 +1,19 @@
+Running via sbatch on puck5 on Tue Jul 29 11:22:59 AM CEST 2025
+Python 3.10.13
+WARNING:root:failed to find espeak library. Won't be able to phonemize text or numbers
+WARNING:spontaneous_chat:Invalid task name [a in file /scratch1/data/derived_data/HD_PARK_HOSPITAL/annotations/normalized/MICRO4/4CH034M/apavard/final.TextGrid
+WARNING:spontaneous_chat:Invalid task name Les dernières 24h in file /scratch1/data/derived_data/HD_PARK_HOSPITAL/annotations/normalized/MICRO1/4CH233M/l.carabin/final.TextGrid
+WARNING:spontaneous_chat:Invalid task name mois de l'année enver in file /scratch1/data/derived_data/HD_PARK_HOSPITAL/annotations/normalized/MICRO4/4CH065M/hkerleau/final.TextGrid
+WARNING:spontaneous_chat:Invalid task name L-[a]-[i]-[u in file /scratch1/data/derived_data/HD_PARK_HOSPITAL/annotations/normalized/MICRO4/4CH035M/apavard/final.TextGrid
+/home/tleludec/Transcription_whisper/Code/Data/Transcription_whisper_small
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/Annotation_orthophoniste.py", line 226, in <module>
+    new_objet = Transcription_WER(transcription, itw)
+  File "/home/tleludec/Transcription_whisper/Code/Annotation_orthophoniste.py", line 36, in __init__
+    self.transcription_compared = self.compared_transcription(transcription_orthophoniste, transcription_whisper)
+  File "/home/tleludec/Transcription_whisper/Code/Annotation_orthophoniste.py", line 67, in compared_transcription
+    task = self.find_task(start, end)
+  File "/home/tleludec/Transcription_whisper/Code/Annotation_orthophoniste.py", line 115, in find_task
+    item = self.task_segment[i]
+IndexError: list index out of range
+computation end :Tue Jul 29 11:23:27 AM CEST 2025

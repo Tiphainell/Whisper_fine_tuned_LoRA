@@ -1,0 +1,21 @@
+Running via sbatch on puck5 on Thu Nov 13 04:50:34 PM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py:72: UserWarning: [SKIP] Segment hors limites (16879200-16906549) dans /scratch1/data/raw_data/HD_PARK_HOSPITAL/audio/MICRO4/4CH082M.wav
+  warnings.warn(f"[SKIP] Segment hors limites ({start_sample}-{end_sample}) dans {audio_path}")
+/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py:72: UserWarning: [SKIP] Segment hors limites (16980070-17011024) dans /scratch1/data/raw_data/HD_PARK_HOSPITAL/audio/MICRO4/4CH082M.wav
+  warnings.warn(f"[SKIP] Segment hors limites ({start_sample}-{end_sample}) dans {audio_path}")
+/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py:72: UserWarning: [SKIP] Segment hors limites (17134694-17163247) dans /scratch1/data/raw_data/HD_PARK_HOSPITAL/audio/MICRO4/4CH082M.wav
+  warnings.warn(f"[SKIP] Segment hors limites ({start_sample}-{end_sample}) dans {audio_path}")
+/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py:72: UserWarning: [SKIP] Segment hors limites (17256397-17261054) dans /scratch1/data/raw_data/HD_PARK_HOSPITAL/audio/MICRO4/4CH082M.wav
+  warnings.warn(f"[SKIP] Segment hors limites ({start_sample}-{end_sample}) dans {audio_path}")
+/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py:72: UserWarning: [SKIP] Segment hors limites (17345237-17390589) dans /scratch1/data/raw_data/HD_PARK_HOSPITAL/audio/MICRO4/4CH082M.wav
+  warnings.warn(f"[SKIP] Segment hors limites ({start_sample}-{end_sample}) dans {audio_path}")
+/var/spool/slurmd/job51106/slurm_script: line 33: 252705 Killed                  python dataset_hugging_face.py
+computation end :Thu Nov 13 06:36:23 PM CET 2025
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=51106.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

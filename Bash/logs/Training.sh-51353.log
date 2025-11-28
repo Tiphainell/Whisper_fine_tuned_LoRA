@@ -1,0 +1,32 @@
+Running via sbatch on puck5 on Tue Nov 18 05:04:24 PM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
+wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run y5hboets
+wandb: Tracking run with wandb version 0.22.2
+wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251118_170442-y5hboets
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run proud-forest-71
+wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/whisper_lora
+wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/whisper_lora/runs/y5hboets
+The model is already on multiple devices. Skipping the move to device specified in `args`.
+You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+trainable params: 110,592 || all params: 241,845,504 || trainable%: 0.0457
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+  0%|          | 0/4 [00:00<?, ?it/s] 50%|█████     | 2/4 [00:02<00:02,  1.07s/it] 75%|███████▌  | 3/4 [00:03<00:01,  1.10s/it]100%|██████████| 4/4 [00:05<00:00,  1.55s/it]100%|██████████| 4/4 [00:05<00:00,  1.41s/it]
+Batch keys: ['input_features', 'labels']
+Batch keys: ['input_features', 'labels']
+Predictions type: <class 'numpy.ndarray'>
+Decoded Predictions: [" hier matin je suis allé me promener au jarabin où on a notre petit potager qu'on loue à la ville de vendeur et", ' on a vu notre voisin de jardin qui nous a proposé de nous donner un petit tabus un petit figuier et donc on a pris le figuier et puis on a fait le trou pour le planter', " en faisant le trou la bêche a cassé j'ai pris la bêche ma le manche qui a cassé j'ai pris la bêche de la bêche dans l'œil voilà petite blessure pas grand chose ça a fait très mal sur le coup quelques minutes pour récupérer", " et puis voilà ma compagne a continué à planter le figier pendant que moi je récupérais normal et puis du coup on avait prévu de se balader plus longtemps mais on est rentré parce que voilà j'avais besoin quand même de prendre quelque chose de mettre de la glace sur sur ma tente", ' voilà']
+Decoded Labels: ["hier oui hier matin donc ouais je suis allé me promener euh au jardin où où on a notre petit potager euh qu'on loue à la ville de et euh", 'on a vu notre voisin de jardin qui nous a proposé de nous donner un petit arbuste un petit figuier et donc bein on a pris le figuier euh et puis on a fait le trou pour le planter', "et en faisant le trou bah je la bêche a cassé et j'ai pris la bêche le manche qui a cassé j'ai pris la bêche dans le manche de la bêche dans l'oeil voila petite blessure pas grand chose ça a fait très mal sur le coup quelques minutes pour récupérer", "et puis voila ma compagne a continué a planté le figuier pendant que moi je récupérais normal et puis et puis du coup bah on avait prévu de se balader plus longtemps mais on est rentrés parce que voila pour j'avais besoin quand même de prendre quelque chose de mettre de la glace sur ma tempe", 'voila euh']
+WER Score: 24.3605359317905
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mproud-forest-71[0m at: [34m[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20251118_170442-y5hboets/logs[0m
+computation end :Tue Nov 18 05:04:56 PM CET 2025

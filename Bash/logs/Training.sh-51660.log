@@ -1,0 +1,63 @@
+Running via sbatch on puck6 on Tue Nov 25 04:50:54 PM CET 2025
+Python 3.10.13
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Appending key for api.wandb.ai to your netrc file: /home/tleludec/.netrc
+wandb: Currently logged in as: tiphaine-leludec (tiphaine-leludec-ens) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 3bulhln0
+wandb: Tracking run with wandb version 0.22.2
+wandb: Run data is saved locally in /home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/wandb/run-20251125_165102-3bulhln0
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run whole-tree-5
+wandb: ⭐️ View project at https://wandb.ai/tiphaine-leludec-ens/fine-tuning-whisper-lora
+wandb: 🚀 View run at https://wandb.ai/tiphaine-leludec-ens/fine-tuning-whisper-lora/runs/3bulhln0
+The model is already on multiple devices. Skipping the move to device specified in `args`.
+You're using a WhisperTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+/home/tleludec/Transcription_whisper/Data/Features_on_disk
+Training with batch_size=8, lr=1e-4, num_epochs=30, lora_r=1
+trainable params: 491,520 || all params: 1,543,796,480 || trainable%: 0.0318
+  0%|          | 0/4 [00:00<?, ?it/s] 50%|█████     | 2/4 [00:05<00:05,  2.55s/it] 75%|███████▌  | 3/4 [00:08<00:02,  2.86s/it]100%|██████████| 4/4 [00:14<00:00,  3.89s/it]100%|██████████| 4/4 [00:14<00:00,  3.52s/it]
+Predictions type: <class 'numpy.ndarray'>
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 312, in <module>
+    train(features_dir=features_dir, whisper_model=whisper_model, batch_size=batch_size,learning_rate=learning_rate,num_train_epochs=num_epochs, lora_r=lora_rank,lora_dropout=lora_dropout, lora_alpha=lora_alpha, test_eval=test_evaluation,output_dir=output_dir)
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 237, in train
+    trainer.train()
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 2432, in _inner_training_loop
+    self.create_optimizer_and_scheduler(num_training_steps=max_steps)
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 1258, in create_optimizer_and_scheduler
+    self.create_optimizer()
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 1324, in create_optimizer
+    self.optimizer = optimizer_cls(optimizer_grouped_parameters, **optimizer_kwargs)
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/optim/adamw.py", line 37, in __init__
+    super().__init__(
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/optim/adam.py", line 58, in __init__
+    if not 0.0 <= lr:
+TypeError: '<=' not supported between instances of 'float' and 'str'
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 312, in <module>
+    train(features_dir=features_dir, whisper_model=whisper_model, batch_size=batch_size,learning_rate=learning_rate,num_train_epochs=num_epochs, lora_r=lora_rank,lora_dropout=lora_dropout, lora_alpha=lora_alpha, test_eval=test_evaluation,output_dir=output_dir)
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 237, in train
+    trainer.train()
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 2432, in _inner_training_loop
+    self.create_optimizer_and_scheduler(num_training_steps=max_steps)
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 1258, in create_optimizer_and_scheduler
+    self.create_optimizer()
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/transformers/trainer.py", line 1324, in create_optimizer
+    self.optimizer = optimizer_cls(optimizer_grouped_parameters, **optimizer_kwargs)
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/optim/adamw.py", line 37, in __init__
+    super().__init__(
+  File "/home/tleludec/Transcription_whisper/venv_oberon/lib/python3.10/site-packages/torch/optim/adam.py", line 58, in __init__
+    if not 0.0 <= lr:
+TypeError: '<=' not supported between instances of 'float' and 'str'
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mwhole-tree-5[0m at: [34m[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20251125_165102-3bulhln0/logs[0m
+computation end :Tue Nov 25 04:51:33 PM CET 2025

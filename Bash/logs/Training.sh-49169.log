@@ -1,0 +1,7 @@
+Running via sbatch on puck5 on Wed Oct 15 09:48:26 AM CEST 2025
+Python 3.9.18
+Traceback (most recent call last):
+  File "/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/dataset_hugging_face.py", line 1, in <module>
+    import torchaudio
+ModuleNotFoundError: No module named 'torchaudio'
+computation end :Wed Oct 15 09:48:26 AM CEST 2025
