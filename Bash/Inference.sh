@@ -6,7 +6,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=10G
-#SBATCH --output=/home/tleludec/Transcription_whisper/Bash/logs/%x-%j.log
+#SBATCH --output=/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/Bash/logs/%x-%j.log
 
 module load mbrola/3.3-dev
 
@@ -22,7 +22,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Construire les chemins absolus
 LOG_DIR="$SCRIPT_DIR/logs"
-CODE_DIR="/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script"
+CODE_DIR="/home/tleludec/Transcription_whisper/Code/fine-tuning-whisper/Script/src"
 
 
 

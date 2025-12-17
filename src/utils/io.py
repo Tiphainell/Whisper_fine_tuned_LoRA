@@ -1,5 +1,9 @@
-import csvdef export_csv_full(filenames, base_preds, base_refs,
-                    lora_preds
+import csv
+from jiwer import wer
+
+
+def export_csv_full(filenames, base_preds, base_refs,
+                    lora_preds,
                     path="wer_comparison.csv"):
     """
     Export a detailed comparison table between the base model and the LoRA model.
@@ -25,15 +29,15 @@ import csvdef export_csv_full(filenames, base_preds, base_refs,
         ])
 
         for i, (fn, bp, br,lp) in enumerate(
-            zip(filenames, base_preds, base_refs, base_wers, lora_preds, lora_wers)
+            zip(filenames, base_preds, base_refs, lora_preds)
         ):
             bw=wer(br,bp)
-            lw=wer(
+            lw=wer(br,lp)
             writer.writerow([i, fn, bp, br, bw, lp, lw])
 
     print(f"CSV créé : {path}")
     
-    def compute_wer_per_sample(preds, refs):
+def compute_wer_per_sample(preds, refs):
     """
     Compute WER at the utterance level (per sample).
 

@@ -8,7 +8,7 @@
 from torch.utils.data import DataLoader
 from pathlib import Path
 import torch
-from transformers import WhisperProcessor, WhisperForConditionalGeneration, S
+from transformers import WhisperProcessor, WhisperForConditionalGeneration
 from peft import PeftModel
 from jiwer import wer
 import yaml
@@ -17,7 +17,7 @@ from tqdm import tqdm
 import numpy as np
 from utils.metrics import normalized_ponctuation
 from utils.io import export_csv_full
-from utils.collator import WhisperCollator, WhisperFeaturesDataset
+from utils.batch_processing import WhisperCollator, WhisperFeaturesDataset
 from utils.models import load_lora_model, load_base_model
 
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     # Load configuration from YAML
     # ---------------------------
 
-    with open("config/config_inference.yaml", "r") as f:
+    with open("../configs/config_inference.yaml", "r") as f:
         config = yaml.safe_load(f)
 
     #------------------
@@ -107,7 +107,7 @@ if __name__ == "__main__":
     
     collator = WhisperCollator(processor, include_filenames=True, remove_forbidden_keys=False)
 
-    dataloader= DataLoader(test_dataset, batch_size=8, collate_fn=collate_fn)
+    dataloader= DataLoader(test_dataset, batch_size=8, collate_fn=collator)
     
     # ---Device ---
     device="cuda" if torch.cuda.is_available() else "cpu"
