@@ -2,7 +2,7 @@
 #SBATCH --nodelist=puck6
 #SBATCH --time=48:00:00
 #SBATCH --export=ALL
-#SBATCH --partition=erc-cristia 
+#SBATCH --partition="your_partition"
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=10G

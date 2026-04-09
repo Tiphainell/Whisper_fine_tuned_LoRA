@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --nodelist=puck5
+#SBATCH --nodelist="your_node"
 #SBATCH --time=48:00:00
 #SBATCH --export=ALL
 #SBATCH --partition=gpu

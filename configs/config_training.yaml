@@ -25,7 +25,7 @@ paths:
 wandb: 
  project: "fine-tuning-whisper-lora"
  run_name: "whisper_lora_experiment_2"
- wandb_key: "13d600e074c23c19f157606badf5f9f381e5537a"
+ wandb_key: "your_key"
  
  
 #Callbacks

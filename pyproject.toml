@@ -1,0 +1,25 @@
+[project]
+name = "fine_tuning_Whisper-LoRA"
+version = "0.0.1"
+description = "Script for fine-tuning Whisper using LoRA"
+readme = "README.md"
+authors = [{ name = "Tiphaine Le Ludec" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy",
+    "torch",
+    "torchaudio",
+    "tqdm",
+    "transformers",
+    "wandb",
+    "evaluate",
+    "peft",
+    "jiwer"
+]
+keywords = ["whisper", "lora", "speech-recognition", "fine-tuning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+urls = { "Homepage" = "https://github.com/ton_compte/fine_tuning_Whisper-LoRA" }
